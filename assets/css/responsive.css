@@ -1,0 +1,89 @@
+/* =========================================================
+   Spread Love Foundation — responsive.css
+   ========================================================= */
+
+/* ---------- Tablet ---------- */
+@media (max-width: 960px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.7rem; }
+
+    .cards.three { grid-template-columns: repeat(2, 1fr); }
+
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+
+    .feature-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .feature-row.reverse img { order: 0; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+    .hero { min-height: 62vh; }
+    .hero h1 { font-size: 1.9rem; }
+    .hero-sub { font-size: 1rem; }
+
+    .section { padding: 2.75rem 0; }
+
+    .two-col,
+    .program-grid,
+    .cards.two,
+    .cards.three,
+    .gallery-grid,
+    .donation-panel {
+        grid-template-columns: 1fr;
+    }
+    .donation-panel { padding: 1.5rem; }
+    .donation-form { grid-template-columns: 1fr; }
+    .donation-form .form-group,
+    .donation-form button { grid-column: 1; }
+
+    .gallery-item img { height: 220px; }
+
+    .two-col-list { columns: 1; }
+
+    /* Mobile nav */
+    .nav-toggle { display: flex; }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 8px 20px rgba(0,0,0,.12);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
+    }
+    .main-nav.open { max-height: 500px; }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: .5rem 1.25rem 1rem;
+    }
+    .main-nav li { border-bottom: 1px solid #f0f0f0; }
+    .main-nav a {
+        display: block;
+        padding: .85rem 0;
+        border-bottom: none;
+    }
+    .main-nav li:last-child { border-bottom: none; padding-top: .5rem; }
+    .main-nav .btn { text-align: center; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .footer-bottom { text-align: center; }
+
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .hero-actions .btn { width: 100%; text-align: center; }
+}
+
+/* ---------- Very small screens ---------- */
+@media (max-width: 400px) {
+    .brand-text { display: none; }
+    .hero h1 { font-size: 1.6rem; }
+    h1 { font-size: 1.8rem; }
+}
